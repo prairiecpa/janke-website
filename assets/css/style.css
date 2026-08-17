@@ -1,0 +1,65 @@
+/* Janke LLP — base styles */
+
+:root {
+  --color-bg: #ffffff;
+  --color-text: #1a1a1a;
+  --color-primary: #0a2540;
+  --color-accent: #b08d57;
+  --font-body: Georgia, "Times New Roman", serif;
+  --font-heading: Arial, Helvetica, sans-serif;
+  --max-width: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+header.site-header {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 1rem 0;
+}
+
+header.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+}
+
+footer.site-footer {
+  border-top: 1px solid #e5e5e5;
+  margin-top: 3rem;
+  padding: 2rem 0;
+  font-size: 0.85rem;
+  color: #666;
+}
