@@ -21,7 +21,7 @@ architecture decisions — it is the operating brief for this repository.
 │   │   └── main.js             Mobile nav (progressive enhancement only)
 │   ├── fonts/manrope/          Self-hosted Manrope variable webfont (see LICENSE.txt)
 │   └── images/
-│       ├── logo/               Logo files extracted from the brand template package
+│       ├── logo/               Vector logo files (outlined paths, no font dependency)
 │       └── ...                 (photography goes here once supplied)
 ├── docs/
 │   └── brand/                  Source brand package + Website Design & Build Context
@@ -47,29 +47,27 @@ deploy automatically once the Netlify site is linked.
 
 ## Brand assets in this repo
 
-- **Logos** (`assets/images/logo/`):
-  - `janke-llp-logo-svg.svg` is the **master vector source** (added directly
-    by the client). It's built with live `<text>` elements set in the actual
-    Gilroy family (JANKE = ExtraBold, LLP = Light, PROFESSIONAL ACCOUNTANTS =
-    Regular) rather than outlined paths, and has no embedded font data.
-    That makes it correct only on a machine that has Gilroy installed — a
-    real website visitor's browser will substitute a fallback font and the
-    wordmark will look wrong. **Do not reference this file directly via
-    `<img>`/`background-image` on the live site.** It's kept as the
-    authoritative reference for anyone doing future asset work in a tool
-    (Illustrator/Inkscape/Figma) that has Gilroy licensed and installed —
-    ideally to produce an outlined-path SVG plus fresh high-res PNG/WebP
-    exports.
-  - `janke-llp-logo-black.png`, `janke-llp-logo-white.png`,
-    `janke-llp-mark-black.png` are what the site actually renders. They were
-    extracted directly from the approved brand template documents
-    (letterhead and dark-template media) — i.e. they **are** the approved
-    artwork, just pulled out of the Word/PowerPoint files rather than
-    supplied standalone. Adequate resolution for on-screen header/footer
-    use; regenerate at higher resolution from the master SVG only via a
-    proper design tool with a licensed Gilroy install, not by rasterizing
-    live SVG text (which would effectively be recreating the logo from text
-    rather than using approved artwork).
+- **Logos** (`assets/images/logo/`) are all vector (`.svg`), used directly
+  via `<img>` on every page:
+  - `janke-llp-logo-black.svg` / `janke-llp-logo-white.svg` — full lockup
+    ("JANKE LLP" + "PROFESSIONAL ACCOUNTANTS"), used in the footer.
+  - `janke-llp-wordmark-black.svg` / `janke-llp-wordmark-white.svg` —
+    "JANKE LLP" only (no tagline line), used in the header where the full
+    lockup's subline would render illegibly small.
+
+  These are outlined-path exports (glyphs converted to vector shapes, no
+  live text, no font dependency), supplied by the client to replace an
+  earlier live-text SVG that only rendered correctly on machines with
+  Gilroy installed. Because they're paths rather than text, they render
+  identically for every visitor regardless of installed fonts, and are the
+  true master artwork rather than an extraction. The white variants were
+  produced by an exact, lossless fill-colour swap (`#000000` → `#ffffff`)
+  of the black originals — geometry untouched — matching the black-on-light
+  / white-on-dark treatment the brand guide specifies; the wordmark-only
+  crop uses the exact bounding box of the "JANKE LLP" path (measured via
+  `getBBox()`, not estimated) plus 1 unit of padding. No raster PNGs remain
+  in the repo — the earlier Word-template-extracted PNGs were removed as
+  superseded now that proper vector artwork exists.
 - **Manrope** (`assets/fonts/manrope/`) is self-hosted. Gilroy is the
   approved primary heading face per the brand guide, but no licensed Gilroy
   webfont files exist in this repository, so the approved web fallback
