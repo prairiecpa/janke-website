@@ -4,22 +4,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Page Not Found | Janke LLP</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <meta name="robots" content="noindex, follow">
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
   <header class="site-header">
-    <div class="container">
-      <a href="/index.html" class="site-logo"><strong>Janke LLP</strong></a>
+    <div class="container site-header__bar">
+      <a class="site-logo" href="/index.html" aria-label="Janke LLP — home">
+        <img src="/assets/images/logo/janke-llp-mark-black.png" alt="Janke LLP" width="240" height="75">
+      </a>
     </div>
   </header>
 
-  <main class="container">
-    <h1>Page Not Found</h1>
-    <p>The page you're looking for doesn't exist. <a href="/index.html">Return home</a>.</p>
+  <main id="main">
+    <section class="section">
+      <div class="container container--narrow">
+        <span class="eyebrow">404</span>
+        <h1 style="font-size: var(--text-2xl); margin-top: var(--space-4);">
+          We can't find that page.
+        </h1>
+        <p style="margin-top: var(--space-4); color: var(--color-text-muted); font-size: var(--text-md);">
+          The page you're looking for may have moved, or the address may be
+          incomplete. Start again from the homepage, or get in touch.
+        </p>
+        <div style="margin-top: var(--space-8); display: flex; gap: var(--space-4); flex-wrap: wrap;">
+          <a class="btn btn--primary" href="/index.html">
+            Return home
+            <span class="btn__arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a class="btn btn--ghost" href="/contact.html">Contact us</a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
+    <div class="container container--max site-footer__bottom">
       <p>&copy; <span id="year"></span> Janke LLP. All rights reserved.</p>
     </div>
   </footer>

@@ -1,0 +1,44 @@
+Janke LLP - Finalized Brand Package
+Prepared for website coding and buildout.
+
+This package contains the approved brand system and finalized working documents produced in the brand rollout project.
+
+Brand foundations:
+- Consolidated Brand Guide (justified layout)
+- Brand Quick Reference (Prairie Gold)
+- Brand in Practice Appendix
+- Template Colour Audit
+
+Core document standards and templates:
+- Letter Standard
+- Two-Page Letter Template
+- Memo Standard
+- Memo Template
+- Proposal Standard
+- Full Proposal Template (black cover)
+- Proposal-at-a-Glance Template
+- One-Page Client Handout Standard and Template
+- Recruitment Posting Standard and Template
+
+Marketing and client-facing:
+- Social Media Post Standard and Template
+- Sample Social Media Posts
+- Client Testimonial and Case Study Standard and Template
+- Working with Janke LLP handout (dark edition)
+
+Presentations and analysis:
+- Advisory Report Standard
+- Advisory Report Template (Word)
+- Advisory Report Template (Excel)
+- PowerPoint Standard
+- PowerPoint Template
+
+Email and implementation:
+- Email Signature and Email Formatting Standard
+- Email Signature Template
+- Brand Rollout and Implementation Checklist
+
+Intentionally not included:
+- Brand Governance and Asset Register: deferred until permanent Janke LLP server locations are established.
+- Optional future outputs: Staff Bio & Headshot Standard, Website Content Framework, Annual Brand Review Scorecard.
+- Superseded draft and prior-version files.

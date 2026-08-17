@@ -1,0 +1,104 @@
+/*
+  Janke LLP — Design Tokens
+  Source of truth: /docs/brand (finalized brand package + Website Design & Build Context).
+  Do not add colours outside the approved palette. Do not introduce new near-black
+  shades — see README "Brand colour note" for the #111111 vs #1B1B1B discrepancy.
+*/
+
+:root {
+  /* ---- Brand colour palette (approved) ---- */
+  --color-black: #111111;
+  --color-white: #ffffff;
+  --color-warm-white: #f7f5f0;
+  --color-stone: #c9c5bd;
+  --color-gold: #b58a2c;         /* rules, markers, icons, restrained accents */
+  --color-gold-bright: #d4a842;  /* headline emphasis on black */
+
+  /* ---- Semantic colour roles ---- */
+  --color-bg: var(--color-white);
+  --color-bg-warm: var(--color-warm-white);
+  --color-bg-inverse: var(--color-black);
+
+  --color-text: var(--color-black);
+  --color-text-muted: #5b5b5b;
+  --color-text-inverse: var(--color-white);
+  --color-text-inverse-muted: var(--color-stone);
+
+  --color-border: var(--color-stone);
+  --color-border-inverse: #3a3a3a;
+
+  --color-accent: var(--color-gold);
+  --color-accent-strong: var(--color-gold-bright);
+
+  --color-link: var(--color-black);
+  --color-link-inverse: var(--color-white);
+
+  /* Focus indicator is always black/white for guaranteed contrast, never gold-only */
+  --color-focus: var(--color-black);
+  --color-focus-inverse: var(--color-white);
+
+  /* ---- Typography ---- */
+  /* Gilroy is the approved heading face but no licensed webfont files exist in this
+     repository. Manrope (approved web fallback) is self-hosted under /assets/fonts. */
+  --font-heading: "Manrope", Arial, Helvetica, sans-serif;
+  --font-body: Arial, Helvetica, sans-serif;
+
+  --leading-tight: 1.1;
+  --leading-snug: 1.3;
+  --leading-normal: 1.55;
+  --leading-relaxed: 1.7;
+
+  --tracking-wide: 0.08em;
+  --tracking-wider: 0.14em;
+
+  /* Fluid type scale */
+  --text-xs: 0.8125rem;    /* 13px */
+  --text-sm: 0.9375rem;    /* 15px */
+  --text-base: 1.0625rem;  /* 17px */
+  --text-md: 1.25rem;      /* 20px */
+  --text-lg: clamp(1.375rem, 1.25rem + 0.6vw, 1.625rem);
+  --text-xl: clamp(1.625rem, 1.35rem + 1.2vw, 2.125rem);
+  --text-2xl: clamp(2rem, 1.55rem + 2vw, 2.875rem);
+  --text-3xl: clamp(2.5rem, 1.8rem + 3.2vw, 3.75rem);
+  --text-4xl: clamp(2.75rem, 1.75rem + 4.5vw, 4.75rem);
+
+  /* ---- Spacing scale (4px base) ---- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 2.5rem;
+  --space-8: 3rem;
+  --space-10: 4rem;
+  --space-12: 5rem;
+  --space-16: 7rem;
+
+  --space-section: clamp(4rem, 3rem + 4.5vw, 7.5rem);
+  --space-section-sm: clamp(2.5rem, 2rem + 2.2vw, 4rem);
+
+  /* ---- Layout ---- */
+  --content-reading: 62ch;
+  --content-narrow: 40rem;
+  --content-wide: 1200px;
+  --content-max: 1440px;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+
+  /* ---- Borders / rules ---- */
+  --rule-width: 1px;
+  --rule-width-strong: 2px;
+  --radius-sm: 2px;
+  --radius-md: 3px;
+
+  /* ---- Motion ---- */
+  --motion-fast: 150ms;
+  --motion-base: 250ms;
+  --motion-slow: 450ms;
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ---- Layering ---- */
+  --z-header: 100;
+  --z-mobile-nav: 200;
+  --z-skip-link: 300;
+}

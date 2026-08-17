@@ -1,0 +1,14 @@
+Manrope
+Copyright 2018 The Manrope Project Authors (https://github.com/sharanda/manrope)
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is available with a FAQ at: https://openfontlicense.org
+
+Source: https://fonts.google.com/specimen/Manrope
+Files self-hosted here (manrope-latin.woff2, manrope-latin-ext.woff2) are the
+variable-weight (200-800) static subset files served by Google Fonts,
+downloaded for local/offline hosting per CLAUDE.md section 20 (sensible font
+loading, minimal third-party requests). Gilroy is the brand's approved primary
+heading face; Manrope is used here only because no licensed Gilroy webfont
+files exist in this repository (see CLAUDE.md section 5 and the session
+report).
